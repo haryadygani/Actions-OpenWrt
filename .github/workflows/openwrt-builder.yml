@@ -72,8 +72,8 @@ jobs:
 
     - name: Masukkan Patch Custom
       run: |
-        mkdir -p feeds/kernel/mt76/patches
-        cp patches/*.patch feeds/kernel/mt76/patches/
+        mkdir -p openwrt/package/kernel/mt76/patches
+        cp patches/*.patch openwrt/package/kernel/mt76/patches/
 
     - name: Load custom configuration
       run: |

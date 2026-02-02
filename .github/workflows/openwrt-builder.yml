@@ -70,6 +70,11 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
+      - name: Masukkan Patch Custom
+      run: |
+        mkdir -p feeds/kernel/mt76/patches
+        cp patches/*.patch feeds/kernel/mt76/patches/
+
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
